@@ -74,10 +74,10 @@ class ChristmasLights(private val size: Int) {
     }
 
     fun totalBrightness(): Int {
-        var totalBrightness: Int = 0
+        var totalBrightness = 0
         christmasLightsGrid.forEach { (_, light) ->
             totalBrightness += light.brightness
         }
-        return totalBrightness;
+        return totalBrightness
     }
 }

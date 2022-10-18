@@ -7,11 +7,11 @@ import kotlin.test.assertTrue
 
 class ChristmasLightsTest {
 
-    private lateinit var christmasLights: ChristmasLights;
+    private lateinit var christmasLights: ChristmasLights
 
     @BeforeEach
     internal fun setUp() {
-        christmasLights = ChristmasLights(LIGHTS_GRID_SIZE);
+        christmasLights = ChristmasLights(LIGHTS_GRID_SIZE)
     }
 
     @Test
@@ -146,15 +146,15 @@ class ChristmasLightsTest {
 
     @Test
     fun toggleMultipleLights() {
-        christmasLights.turnOnRangeOfLights(Point(887, 9), Point(959, 629));
-        christmasLights.turnOnRangeOfLights(Point(454, 398), Point(844, 448));
-        christmasLights.turnOffRangeOfLights(Point(539, 243), Point(559, 965));
-        christmasLights.turnOffRangeOfLights(Point(370, 819), Point(676, 868));
-        christmasLights.turnOffRangeOfLights(Point(145, 40), Point(370, 997));
-        christmasLights.turnOffRangeOfLights(Point(301, 3), Point(808, 453));
-        christmasLights.turnOnRangeOfLights(Point(351, 678), Point(951, 908));
-        christmasLights.toggleRangeOfLights(Point(720, 196), Point(897, 994));
-        christmasLights.toggleRangeOfLights(Point(831, 394), Point(904, 860));
+        christmasLights.turnOnRangeOfLights(Point(887, 9), Point(959, 629))
+        christmasLights.turnOnRangeOfLights(Point(454, 398), Point(844, 448))
+        christmasLights.turnOffRangeOfLights(Point(539, 243), Point(559, 965))
+        christmasLights.turnOffRangeOfLights(Point(370, 819), Point(676, 868))
+        christmasLights.turnOffRangeOfLights(Point(145, 40), Point(370, 997))
+        christmasLights.turnOffRangeOfLights(Point(301, 3), Point(808, 453))
+        christmasLights.turnOnRangeOfLights(Point(351, 678), Point(951, 908))
+        christmasLights.toggleRangeOfLights(Point(720, 196), Point(897, 994))
+        christmasLights.toggleRangeOfLights(Point(831, 394), Point(904, 860))
         assertEquals(230022, christmasLights.litLightsCount())
     }
 
@@ -214,7 +214,7 @@ class ChristmasLightsTest {
     }
 
     companion object {
-        private const val LIGHTS_GRID_SIZE = 1000;
+        private const val LIGHTS_GRID_SIZE = 1000
     }
 
     private fun assertLightOn(light: Light) {
